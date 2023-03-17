@@ -12,7 +12,7 @@ let arr = [teamCamper, horarioCamper, salonCamper, ingles, ser];
 form1.addEventListener("submit", (e)=>{
     e.preventDefault();
     let data = Object.fromEntries(new FormData(e.target));
-    campus[data.sede] = {camper: [], trainers: []};
+    campus[`${data.sede}`] = {camper: [], trainers: []};
     console.log(campus);
     sedes();
     form1.reset();
@@ -24,23 +24,49 @@ const sedes = ()=>{
         ciudad.insertAdjacentHTML("beforeend", `<option value="${val}">${val}</option>`)
     }
 }
-// teamCamper.addEventListener('change', (e) =>{
-//     const team = e.target.value;
-//     console.log(team)  
-// });
-// horarioCamper.addEventListener('change', (e) =>{
-//     const horario = e.target.value;
-//     console.log(horario)  
-// });
-// salonCamper.addEventListener('change', (e) =>{
-//     const salon = e.target.value;
-//     console.log(salon)  
-// });
+const datosCamper = ()=>{
+    teamCamper.addEventListener('change', (e) =>{
+        const team = e.target.value;
+        console.log(team)
+    });
+    horarioCamper.addEventListener('change', (e) =>{
+        const horario = e.target.value;
+        console.log(horario)
+    });
+    salonCamper.addEventListener('change', (e) =>{
+        const salon = e.target.value;
+        console.log(salon)
+    });
+    ingles.addEventListener('change', (e) =>{
+        const horarioIngles = e.target.value;
+        console.log(horarioIngles)
+    });
+    ser.addEventListener('change', (e) =>{
+        const horarioSer = e.target.value;
+        console.log(horarioSer)
+    });
+}
+datosCamper();
 
-arr.forEach(element => {
-    element.addEventListener('change', (e)=>{
-        let element = e.target.value;
-        console.log(element);
-        return element
-    })
-});
+form2.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    let data = Object.fromEntries(new FormData(e.target));
+    console.log(data);
+    let sede = data.sedecampus;
+    delete data.sedecampus;
+    campus[`${sede}`]["camper"].unshift(data);
+    console.log(campus);
+    form2.reset();
+    // campus[`${sedecampus}`]['Camper'].unshift(data);
+
+    sedes();
+    form1.reset();
+})
+
+// arr.forEach(element => {
+//     element.addEventListener('change', (e)=>{
+//         let element = e.target.value;
+//         console.log(element);
+//         return element
+//     })
+// });
