@@ -1,0 +1,17 @@
+body {
+  background: rgb(4, 0, 62);
+  background: linear-gradient(90deg, rgb(4, 0, 62) 0%, rgb(1, 88, 199) 100%);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3176470588);
+  backdrop-filter: blur(0.5rem);
+  width: fit-content;
+  margin: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */

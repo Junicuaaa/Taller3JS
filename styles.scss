@@ -1,0 +1,15 @@
+body{
+    background: rgb(4,0,62);
+    background: linear-gradient(90deg, rgba(4,0,62,1) 0%, rgba(1,88,199,1) 100%);
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff51;
+    backdrop-filter: blur(0.5rem);
+    width: fit-content;
+    margin: auto;
+}
