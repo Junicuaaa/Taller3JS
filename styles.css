@@ -1,17 +1,47 @@
+*{
+  font-family:;
+}
 body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgb(4, 0, 62);
-  background: linear-gradient(90deg, rgb(4, 0, 62) 0%, rgb(1, 88, 199) 100%);
+  background: linear-gradient(90deg, rgb(4, 0, 62) 0%, rgb(0, 51, 117) 100%);
+}
+.imagen{
+  background-color: #f7f5f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 35em !important;
+  color: #ffff;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.3176470588);
+  background-color: rgba(0, 0, 0, 0.658);
   backdrop-filter: blur(0.5rem);
-  width: fit-content;
-  margin: auto;
+  width: 20em;
+  padding: 1.5em;
+  font-size: 1.3em;
+  border-radius: 1 em;
+}
+article #form2 input, select{
+  display: block;
+  width: 30em;
+  height: 3em;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+article #form1 input, select{
+  display: block;   
+  width: 30em;
+  height: 3em;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
