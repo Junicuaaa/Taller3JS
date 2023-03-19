@@ -1,6 +1,5 @@
 *{
-  font-family:;
-}
+  font-family: 'Prompt', sans-serif;}
 body {
   height: 100vh;
   display: flex;
@@ -15,9 +14,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+label{
+  display: flex;
+  background-color: rgb(35, 220, 226);
 
+}
 article {
-  height: 35em !important;
+  height: 36em !important;
   color: #ffff;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.658);
@@ -25,23 +28,53 @@ article {
   width: 20em;
   padding: 1.5em;
   font-size: 1.3em;
-  border-radius: 1 em;
 }
-article #form2 input, select{
-  display: block;
-  width: 30em;
-  height: 3em;
+article #form1 div{
+  display: flex;
+  align-items: center;
   border: none;
   margin: 0;
   padding: 0;
 }
-article #form1 input, select{
-  display: block;   
-  width: 30em;
+article #form1 div input, button{
   height: 3em;
   border: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+
+}
+article #form1 div input{
+  min-width: 50%;
+  max-width: 50%;
+  padding: 0 0 0 5px;
 }
 
+article #form1 div button{
+  min-width: 50%;
+  max-width: 50%;
+}
+button{
+  background-color: rgb(35, 220, 226);
+}
+button:hover{
+  background-color: rgb(29, 170, 175);
+  cursor: pointer;
+}
+article #form2 input, select{
+  display: block;  
+  width: 100%;
+  height: 3em;
+  border: none;
+  margin: 5px 0;
+}
+article #form2 input{
+  width: calc(100% - 5px);
+}
+article #form2 button{
+  width: 100%;
+} 
+input{
+  margin: 5px 0;
+  padding: 0 0 0 5px;
+}
 /*# sourceMappingURL=styles.css.map */
