@@ -14,13 +14,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-label{
-  display: flex;
-  background-color: rgb(35, 220, 226);
-
+#informacionPantalla{
+  display: none;
 }
 article {
-  height: 36em !important;
+  height: 37em !important;
   color: #ffff;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.658);
@@ -43,9 +41,12 @@ article #form1 div input, button{
   margin: 0;
 
 }
+#form3{
+  display: none;
+}
 article #form1 div input{
-  min-width: 50%;
-  max-width: 50%;
+  min-width: calc(50% - 5px);
+  max-width: calc(50% - 5px);
   padding: 0 0 0 5px;
 }
 
@@ -55,6 +56,7 @@ article #form1 div button{
 }
 button{
   background-color: rgb(35, 220, 226);
+  width: 100%;
 }
 button:hover{
   background-color: rgb(29, 170, 175);
@@ -70,11 +72,48 @@ article #form2 input, select{
 article #form2 input{
   width: calc(100% - 5px);
 }
-article #form2 button{
-  width: 100%;
-} 
 input{
   margin: 5px 0;
   padding: 0 0 0 5px;
+
 }
+#cambiar{
+  margin: 5px 0 0 0;
+}
+#cambiar2{
+  display: none;
+  margin: 5px 0 0 0;
+}
+#form3 input{
+  width: calc(100% - 5px );
+  border: none;
+  height: 3em;
+  margin: 5px 0 0 0;
+}
+#form3 select, #form3 button{
+  margin: 5px 0 0 0;
+}
+form{
+  position: relative;
+}
+h5{
+  position: relative;
+}
+h5::before{
+  content: "";
+  position: absolute;
+  width: 147px;
+  height: 3px;
+  background-color: rgb(35, 220, 226);
+  bottom: -5px;
+}
+#form1 h5::before{
+  width: 160px;
+}
+/* #imprimirInfo{
+  display: none;
+  margin: 5px 0 0 0;
+  background-color: rgb(0, 51, 117);
+  color: #fff;
+} */
 /*# sourceMappingURL=styles.css.map */
